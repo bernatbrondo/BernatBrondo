@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8    ">
+    <title>Bernat Brondo</title>
+
+    <style>
+        body {
+    background-color: black;
+    color: white;
+}
+        hr {
+    border-color: black;
+}
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            margin-top: 0px;
+            position: relative;
+        }
+
+        .nav-center {
+            position: absolute;
+            left: 49.3vw;
+            transform: translateX(-50%);
+            margin: 10px 0 !important;
+        }
+
+        .navbar p {
+            margin: 10px 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+        .navbar a:hover {
+            text-decoration: overline;
+            color: var(--hover-color);
+        }
+
+        .content1 {
+            text-align: center;
+            font-family: Arial;
+            font-size: 50px;
+            margin-top: 35px;
+            margin-bottom: -50px;
+            position: relative; 
+            left: -4px;
+        }
+
+        .content1 p {
+            margin: 0;
+        }
+
+        .big-photo {
+            width: 1px;     
+            height: auto;
+        }
+        .proyectos {
+            width: 80%;
+            margin: 100px auto;
+        }
+
+        .proyecto {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .proyecto img {
+            width: 300px;
+            height: auto;
+        }
+
+        .info {
+            font-family: arial;
+        }
+
+        .titulo {
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .titulo:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .info p {
+            font-size: 14px;
+            margin-top: 10px;
+            color: white;
+        }
+        @media (max-width: 600px) {
+
+    .navbar {
+        font-size: 18px;
+        gap: 0;
+    }
+
+    .navbar p {
+        margin: 10px 10px;
+    }
+
+    .nav-center {
+        font-size: 18px;
+    }
+
+    .content1 {
+        font-size: 30px;
+        margin-top: 30px;
+        left: 0;
+    }
+
+    .proyectos {
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    .proyecto {
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .proyecto img {
+        width: 45%;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .info p {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <p style="font-family: arial;"><a href="index.html">Work</a></p>
+
+    <p class="nav-center" style="font-family: arial;">Music and Sound</p>
+
+    <p style="font-family: arial;"><a href="bernat.html">Bernat Brondo</a></p>
+</div>
+<hr>
+
+<div class="proyectos">
+
+    <div class="proyecto">
+        <img src="MIRAGES.png">
+
+        <div class="info">
+            <a href="https://www.youtube.com/watch?v=ClrIiccNd_Q" class="titulo">MIRAGES (2025) </a>
+            <p><b>Music - Bernat Brondo</b></p>
+            <p>For Bofill Taller de Arquitectura</p>
+        </div>
+    </div>
+
+    <div class="proyecto">
+        <img src="DAGESTAN.jpg">
+
+        <div class="info">
+            <a href="https://www.youtube.com/watch?v=uuOa2zIi3Qw" class="titulo">DAGESTAN (2025) </a>
+            <p><b>Music and VFX - Bernat Brondo</b></p>
+        </div>
+    </div>
+
+    <div class="proyecto">
+        <img src="TOTEM.png">
+
+        <div class="info">
+            <a href="https://www.bofill.com/journal/totem/" class="titulo">TOTEM (2026) </a>
+            <p><b>Music and Sound - Bernat Brondo</b></p>
+            <p>For Bofill Taller de Arquitectura</p>
+        </div>
+    </div>
+
+</div>

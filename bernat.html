@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8    ">
+    <title>Bernat Brondo</title>
+
+    <style>
+        body {
+    background-color: black;
+    color: white;
+}
+        hr {
+    border-color: black;
+}
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            margin-top: 0px;
+            position: relative;
+        }
+
+        .nav-center {
+            position: absolute;
+            left: 49.3vw;
+            transform: translateX(-50%);
+            margin: 10px 0 !important;
+        }
+
+        .navbar p {
+            margin: 10px 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+        .navbar a:hover {
+            text-decoration: overline;
+            color: var(--hover-color);
+        }
+
+        .content {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .big-photo {
+            width: 1px;     
+            height: auto;
+        }
+
+        .big-ig {
+            font-size: 30px;  
+            margin-top: 0;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .big-ig a {
+            text-decoration: none;
+            color: white;       
+        }
+
+        .big-ig a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+        .email {
+            font-size: 30px;
+        }
+
+        .email a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .email a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+        @media (max-width: 600px) {
+
+    .navbar {
+        font-size: 18px;
+        gap: 0;
+    }
+
+    .navbar p {
+        margin: 10px 10px;
+    }
+
+    .nav-center {
+        font-size: 18px;
+    }
+
+    .content1 {
+        font-size: 30px;
+        margin-top: 30px;
+        left: 0;
+    }
+
+    .proyectos {
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    .proyecto {
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+
+    .proyecto img {
+        width: 45%;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .info p {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+} 
+    </style>
+</head>
+
+<body>
+<div class="navbar">
+    <p style="font-family: Arial;"><a href="index.html">Work</a></p>
+
+    <p class="nav-center" style="font-family: arial;">Music and Sound</p>
+
+    <p style="font-family: arial;"><a href="bernat.html">Bernat Brondo</a></p>
+</div>
+<hr>
+
+<div style="position: relative;">
+    
+
+    <img id="foto" src="JO.JPEG" style="width: 500px; height: auto; display: block; margin: 0 auto; cursor: pointer;">
+
+    <div class="big-ig" style="position: absolute; right: calc(50% + 270px); top: 50%; transform: translateY(-50%) rotate(-90deg);">
+        <p style="font-family: arial;">
+            <a href="https://www.instagram.com/bernatbrondo/" target="_blank">@bernatbrondo</a>
+        </p>
+    </div>
+    <div class="email" style="position: absolute; left: calc(50% + 210px); top: 50%; transform: translateY(-50%) rotate(90deg);">
+    <p style="font-family: arial;">
+        <a href="mailto:bernatbrondo@gmail.com">bernatbrondo@gmail.com</a>
+    </p>
+</div>
+
+</div>
+<script>
+    const fotos = [
+    "JO.JPEG",
+    "JO-ROJO.JPEG",
+    "JO-AZUL.JPEG",
+    "JO-VERDE.JPEG",
+    "JO-ROSA.JPEG",
+    "JO-AMARILLO.JPEG"
+];
+
+const colores = [
+    "white",
+    "red",
+    "blue",
+    "#4AF739",
+    "#FF29E9",
+    "yellow"
+];
+
+let indice = 0;
+
+const foto = document.getElementById("foto");
+const enlaces = document.querySelectorAll(".navbar a, .big-ig a, .email a");
+
+enlaces.forEach(enlace => {
+    enlace.style.setProperty("--hover-color", colores[0]);
+});
+
+foto.addEventListener("click", function() {
+    indice = (indice + 1) % fotos.length;
+    this.src = fotos[indice];
+
+    enlaces.forEach(enlace => {
+        enlace.style.setProperty("--hover-color", colores[indice]);
+    });
+});
+</script>
+</body>
+</html>
+
